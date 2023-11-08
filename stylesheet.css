@@ -1,0 +1,112 @@
+:root{
+    font-size:10px;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-Bold.ttf') format('ttf'); 
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/** Mobile Style*/
+body{
+    font-size:1.6rem;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: hsl(0, 0%, 86%);    
+    padding: 0 4rem;  
+}
+.card{
+    background-color: hsl(0,0%,100%);
+    border-radius: 1rem 1rem 8rem 1rem;
+    padding: 1.6rem;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    min-width: calc(375px - 4rem);
+    padding-bottom: 6rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    color: hsl(0, 1%, 44%);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+input{
+    color: hsl(0,0%,8%);
+    font-weight: 600;
+    width: 100%;
+    padding: 0.8rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    border: 1px solid hsl(0, 1%, 44%);
+    letter-spacing: 1px;
+}
+input:hover{
+    border: 1px solid hsl(310, 70%, 32%);
+
+}
+.form-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-control{
+    width:100%;
+    padding-right:1.6rem;
+}
+.form-section{
+    margin-right: 1.6rem;
+}
+
+.form-button{
+    margin-top: 3rem;
+    position: relative;
+    height: 5rem;
+}
+.form-button img{
+    position: absolute;
+    right: calc(50% - 2.5rem);
+    top: -50%;
+}
+img{
+    background-color: hsl(228, 45%, 44%);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+img:hover{
+    background-color: hsl(0 , 0% , 8%);
+}
+.result-span{
+    color: hsl(228, 45%, 44%);
+}
+#result h2{
+    font-weight: 900;
+    font-size: 6rem;
+}
+
+@media screen and (max-width:1440px){
+    .card{    
+     max-width: calc(600px - 4rem);
+    }
+    .form-button img{
+        position: absolute;
+        left: calc(100% - 4rem);
+        top: -50%;
+    }
+}
