@@ -1,6 +1,7 @@
 :root{
     font-size:10px;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
 
 .attribution { font-size: 11px; text-align: center; }
@@ -81,7 +82,12 @@ input:hover , input:active{
 .form-section{
     margin-right: 1.6rem;
 }
-
+.error{
+    color: red;
+    font-size: small;
+    font-style: italic;
+    font-weight: lighter;
+}
 .form-button{
     margin: 4rem 0;
     display: flex;
@@ -107,7 +113,7 @@ button:hover, button:active{
     color: hsl(260, 96%, 64%);
 }
 #result h2{
-    font-weight: 900;
+    font-weight: bolder;
     font-size: 6rem;
     font-style: italic;
 }
