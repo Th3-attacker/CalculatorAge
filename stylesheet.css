@@ -1,36 +1,35 @@
 :root{
     font-size:10px;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-@font-face {
-    font-family: 'Poppins';
-    src: url('./assets/fonts/Poppins-Bold.ttf') format('ttf'); 
-}
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins',sans-serif; 
     box-sizing: border-box;
     text-decoration: none;
 }
 /** Mobile Style*/
 body{
+    font-family: 'Poppins',sans-serif; 
     font-size:1.6rem;
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content:center;
-    background-color: hsl(0, 0%, 86%);    
+    background-color: #F0F0F0; 
     padding: 0 4rem;  
 }
 .card{
     background-color: hsl(0,0%,100%);
-    border-radius: 1rem 1rem 8rem 1rem;
+    border-radius: 1.6rem 1.6rem 10rem 1.6rem;
     padding: 1.6rem;
-    max-width: 40rem;
+    max-width: 30rem;
     display: flex;
     flex-direction: column;
     min-width: calc(375px - 4rem);
@@ -40,24 +39,35 @@ form{
     display: flex;
     flex-direction: column;
 }
+.form-control{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.last{
+    padding-right: 0;
+}
 label{
     color: hsl(0, 1%, 44%);
-    font-size: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
     letter-spacing: 2px;
 }
 input{
-    color: hsl(0,0%,8%);
-    font-weight: 600;
-    width: 100%;
+    margin-top: 0.2rem;
+    color: hsl(0, 0%, 0%);
+    font-weight: 800;
+    width: 8.8rem;
     padding: 0.8rem;
-    height: 4rem;
+    height: 5rem;
     border-radius: 0.5rem;
+    font-size: 2rem;
+    font-weight: 800;
     border: 1px solid hsl(0, 1%, 44%);
     letter-spacing: 1px;
 }
-input:hover{
+input:hover , input:active{
     border: 1px solid hsl(310, 70%, 32%);
-
 }
 .form-section{
     display: flex;
@@ -73,40 +83,66 @@ input:hover{
 }
 
 .form-button{
-    margin-top: 3rem;
-    position: relative;
-    height: 5rem;
+    margin: 4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 0.2px solid hsl(0, 6%, 91%);
+    height: 0.2px;
 }
-.form-button img{
-    position: absolute;
-    right: calc(50% - 2.5rem);
-    top: -50%;
-}
-img{
-    background-color: hsl(228, 45%, 44%);
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
+button{
+    background-color: hsl(260, 96%, 64%);
+    border: none;
+    border-radius:55%;
+    padding: 1.6rem;
+    color: white;
     cursor: pointer;
 }
-img:hover{
-    background-color: hsl(0 , 0% , 8%);
+button:hover, button:active{
+    background-color: hsl(0, 0%, 0%);
 }
+
 .result-span{
-    color: hsl(228, 45%, 44%);
+    color: hsl(260, 96%, 64%);
 }
 #result h2{
     font-weight: 900;
     font-size: 6rem;
+    font-style: italic;
 }
 
-@media screen and (max-width:1440px){
-    .card{    
-     max-width: calc(600px - 4rem);
+@media screen and (min-width: 900px){
+    .card{
+        display: flex;
+        width: 60rem;
+        height: 50rem;
+        max-width: 114.4rem;
+        min-width: 70rem;
+        border-radius: 2rem 2rem 20rem 2rem;
     }
-    .form-button img{
-        position: absolute;
-        left: calc(100% - 4rem);
-        top: -50%;
+    .form-control{
+        margin-right:1.6rem;
+    }
+    .form-section{
+        display: flex;
+        justify-content: space-around;
+        margin-right: 10rem;
+    }
+    input{
+        width: 14rem;
+        height: 6rem;
+    }
+
+   .form-button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 95%;
+   } 
+   #result h2{
+    font-weight: 800;
+    font-size: 9rem;
+    font-style: italic;
     }
 }

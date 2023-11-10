@@ -15,46 +15,56 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    <section class="card">
+    <main class="card">
       <section>
-        <form action="" method="get" id="ageCalculator">
-          <section class="form-section">
-            <section class="form-control">
-              <label for="">DAY</label>
-              <input type="number" id="day" placeholder="DD" />
-            </section>
-            <section class="form-control">
-              <label for="">MONTH</label>
-              <input type="number" id="month" placeholder="MM" />
-            </section>
-            <section class="form-control">
-              <label for="">YEAR</label>
-              <input type="number" id="year" placeholder="YYYY" />
-            </section>
-          </section>
-          <section class="form-button">
-            <hr>
-            <img
-            type="button"
-            onclick="calculateAge()"
-            src="./assets/images/icon-arrow.svg"
-            alt=""
-            />
-          </section>
-          
+        <form method="get" id="ageCalculator">
+          <div class="form-section">
+            <div class="form-control">
+              <label for="day">DAY</label>
+              <input type="text" name="day" id="day" placeholder="DD" required/>
+              <span id="dayError" class="error"></span>
+            </div>
+            <div class="form-control">
+              <label for="month">MONTH</label>
+              <input type="text" name="month"  id="month" placeholder="MM" required/>
+              <span id="monthError" class="error"></span>
+            </div>
+            <div class="form-control last">
+              <label for="year">YEAR</label>
+              <input type="text" name="year" id="year" placeholder="YYYY" required/>
+              <span id="yearError" class="error"></span>
+            </div>
+            <span id="errorSpan" class="error"></span>
+          </div>
+          <div class="form-button">
+            <button type="submit" id="calculateButton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 46 44"
+              >
+                <g fill="none" stroke="#FFF" stroke-width="2">
+                  <path
+                    d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
         </form>
       </section>
       <section id="result">
-        <h2><span id="years" class="result-span">--</span> Years</h2>
-        <h2><span id="months" class="result-span">--</span> Months</h2>
-        <h2><span id="days" class="result-span">--</span> Days</h2>
+        <h2><span id="years" class="result-span">--</span> years</h2>
+        <h2><span id="months" class="result-span">--</span> months</h2>
+        <h2><span id="days" class="result-span">--</span> days</h2>
       </section>
       <!---<section class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
           Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
       </section> -->
-    </section>
-    <script src="script.js"></script>
+    </main>
+    <script src="index.js" defer></script>
   </body>
 </html>
