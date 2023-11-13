@@ -1,154 +1,177 @@
-:root{
-    font-size:10px;
+:root {
+  font-size: 10px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+/*Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  padding-top: 5rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins',sans-serif; 
-    box-sizing: border-box;
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 /** Mobile Style*/
-body{
-    font-family: 'Poppins',sans-serif; 
-    font-size:1.6rem;
-    width: 100vw;
-    height: 100vh;
+body {
+  font-family: "Poppins ", sans-serif;
+  font-size: 1.6rem;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  padding: 0 4rem;
+}
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.6rem 1.6rem 10rem 1.6rem;
+  padding: 1.6rem;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  min-width: calc(375px - 4rem);
+  padding-bottom: 6rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.form__control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.last {
+  padding-right: 0;
+}
+label {
+  color: hsl(0, 1%, 44%);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+input {
+  margin-top: 0.2rem;
+  color: hsl(0, 0%, 0%);
+  font-weight: 800;
+  width: 8.8rem;
+  padding: 0.8rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  font-weight: 800;
+  border: 1px solid hsl(0, 1%, 44%);
+  letter-spacing: 1px;
+}
+input:focus {
+  outline: none;
+}
+input:hover,
+input:active {
+  border: 1px solid hsl(310, 65%, 54%);
+}
+.form__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form__control {
+  width: 100%;
+  padding-right: 1.6rem;
+}
+.form__section {
+  margin-right: 1.6rem;
+}
+
+.error {
+  color: red;
+  font-size: small;
+  font-style: italic;
+  font-weight: lighter;
+}
+.form__button {
+  margin: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 0.2px solid hsl(0, 6%, 91%);
+  height: 0.2px;
+}
+button {
+  background-color: hsl(260, 96%, 64%);
+  border: none;
+  border-radius: 55%;
+  padding: 1.6rem;
+  color: white;
+  cursor: pointer;
+}
+button:hover,
+button:active {
+  background-color: hsl(0, 0%, 0%);
+}
+
+.result__span {
+  color: hsl(260, 96%, 64%);
+}
+#result h2 {
+  font-weight: bolder;
+  font-size: 6rem;
+  font-style: italic;
+}
+
+@media screen and (min-width: 900px) {
+  .card {
     display: flex;
-    align-items: center;
-    justify-content:center;
-    background-color: #F0F0F0; 
-    padding: 0 4rem;  
-}
-.card{
-    background-color: hsl(0,0%,100%);
-    border-radius: 1.6rem 1.6rem 10rem 1.6rem;
-    padding: 1.6rem;
-    max-width: 30rem;
-    display: flex;
-    flex-direction: column;
-    min-width: calc(375px - 4rem);
-    padding-bottom: 6rem;
-}
-form{
-    display: flex;
-    flex-direction: column;
-}
-.form-control{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.last{
-    padding-right: 0;
-}
-label{
-    color: hsl(0, 1%, 44%);
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-input{
-    margin-top: 0.2rem;
-    color: hsl(0, 0%, 0%);
-    font-weight: 800;
-    width: 8.8rem;
-    padding: 0.8rem;
-    height: 5rem;
-    border-radius: 0.5rem;
-    font-size: 2rem;
-    font-weight: 800;
-    border: 1px solid hsl(0, 1%, 44%);
-    letter-spacing: 1px;
-}
-input:hover , input:active{
-    border: 1px solid hsl(310, 70%, 32%);
-}
-.form-section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.form-control{
-    width:100%;
-    padding-right:1.6rem;
-}
-.form-section{
+    width: 60rem;
+    height: 50rem;
+    max-width: 114.4rem;
+    min-width: 70rem;
+    border-radius: 2rem 2rem 20rem 2rem;
+  }
+  .form__control {
     margin-right: 1.6rem;
-}
-.error{
-    color: red;
-    font-size: small;
-    font-style: italic;
-    font-weight: lighter;
-}
-.form-button{
-    margin: 4rem 0;
+  }
+  .form__section {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    border: 0.2px solid hsl(0, 6%, 91%);
-    height: 0.2px;
-}
-button{
-    background-color: hsl(260, 96%, 64%);
-    border: none;
-    border-radius:55%;
-    padding: 1.6rem;
-    color: white;
-    cursor: pointer;
-}
-button:hover, button:active{
-    background-color: hsl(0, 0%, 0%);
-}
+    justify-content: space-around;
+    margin-right: 10rem;
+  }
+  input {
+    width: 14rem;
+    height: 6rem;
+  }
 
-.result-span{
-    color: hsl(260, 96%, 64%);
-}
-#result h2{
-    font-weight: bolder;
-    font-size: 6rem;
-    font-style: italic;
-}
-
-@media screen and (min-width: 900px){
-    .card{
-        display: flex;
-        width: 60rem;
-        height: 50rem;
-        max-width: 114.4rem;
-        min-width: 70rem;
-        border-radius: 2rem 2rem 20rem 2rem;
-    }
-    .form-control{
-        margin-right:1.6rem;
-    }
-    .form-section{
-        display: flex;
-        justify-content: space-around;
-        margin-right: 10rem;
-    }
-    input{
-        width: 14rem;
-        height: 6rem;
-    }
-
-   .form-button{
+  .form__button {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 95%;
-   } 
-   #result h2{
+  }
+  #result h2 {
     font-weight: 800;
     font-size: 9rem;
     font-style: italic;
-    }
+  }
 }

@@ -17,26 +17,44 @@
   <body>
     <main class="card">
       <section>
-        <form method="get" id="ageCalculator">
-          <div class="form-section">
-            <div class="form-control">
+        <form method="get" id="ageCalculator" class="form">
+          <div class="form__section">
+            <div class="form__control">
               <label for="day">DAY</label>
-              <input type="text" name="day" id="day" placeholder="DD" required/>
+              <input
+                type="number"
+                name="day"
+                id="day"
+                placeholder="DD"
+                required
+              />
               <span id="dayError" class="error"></span>
             </div>
-            <div class="form-control">
+            <div class="form__control">
               <label for="month">MONTH</label>
-              <input type="text" name="month"  id="month" placeholder="MM" required/>
+              <input
+                type="number"
+                name="month"
+                id="month"
+                placeholder="MM"
+                required
+              />
               <span id="monthError" class="error"></span>
             </div>
-            <div class="form-control last">
+            <div class="form__control last">
               <label for="year">YEAR</label>
-              <input type="text" name="year" id="year" placeholder="YYYY" required/>
+              <input
+                type="number"
+                name="year"
+                id="year"
+                placeholder="YYYY"
+                required
+              />
               <span id="yearError" class="error"></span>
             </div>
-            <span id="errorSpan" class="error"></span>
+            <span class="error" id="errorSpan"></span>
           </div>
-          <div class="form-button">
+          <div class="form__button">
             <button id="calculateButton">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -55,16 +73,18 @@
         </form>
       </section>
       <section id="result">
-        <h2><span id="years" class="result-span">--</span> years</h2>
-        <h2><span id="months" class="result-span">--</span> months</h2>
-        <h2><span id="days" class="result-span">--</span> days</h2>
+        <h2><span id="years" class="result result__span">--</span> years</h2>
+        <h2><span id="months" class="result result__span">--</span> months</h2>
+        <h2><span id="days" class="result result__span">--</span> days</h2>
       </section>
-      <!---<section class="attribution">
+      <footer class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-          Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
-      </section> -->
+          Frontend Mentor</a
+        >
+        . Coded by <a href="#">Your Name Here</a> .
+      </footer>
     </main>
-    <script src="index.js" defer></script>
+    <script src="./index.js"></script>
   </body>
 </html>
