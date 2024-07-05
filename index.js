@@ -73,12 +73,4 @@ document.getElementById('calculateButton').addEventListener('click', function (e
     document.getElementById(errorElementId).innerText = message;
   }
 
-  document.getElementById("App").onclick = function() {sendMessageToFlutter()};
-
-  function sendMessageToFlutter (){
-    if (window.FlutterChannel) {
-      window.FlutterChannel.postMessage('navigate_to_mysiteweb');
-    } else {
-      console.error('window.FlutterChannel is not available.');
-    }
-  };
+ 
