@@ -1,0 +1,10 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.sercom",
+      "sha256_cert_fingerprints":
+      ["EA:35:BE:A7:69:CB:B2:71:7B:55:CC:C0:95:14:FA:9F:93:CE:59:A4:01:63:3C:D1:48:AE:59:BD:72:D3:EE:8A"]
+      
+    }
+  }]
